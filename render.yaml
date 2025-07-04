@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sonarqube
+    env: docker
+    plan: standard
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SONAR_JDBC_URL
+        value: jdbc:postgresql://dpg-d1jrjd7diees73cfkmkg-a:5432/sonarqube_db_kpjl
+      - key: SONAR_JDBC_USERNAME
+        value: sonarqube_db_kpjl_user
+      - key: SONAR_JDBC_PASSWORD
+        value: 31rJxQbP361ARX57znn3MkZIXP7yse2T
